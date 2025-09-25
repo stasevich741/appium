@@ -12,6 +12,7 @@ def allureVersion = "2.19.0",
 
 repositories {
     mavenCentral()
+    google()
 }
 
 dependencies {
