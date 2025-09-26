@@ -13,7 +13,7 @@ import com.codeborne.selenide.WebDriverRunner;
 
 import java.util.List;
 
-import io.appium.java_client.MobileBy;
+import io.appium.java_client.AppiumBy;
 import io.qameta.allure.Step;
 
 
@@ -22,10 +22,10 @@ import io.qameta.allure.Step;
  */
 public class MainPage extends SearchPage {
 
-    private SelenideElement catalogButton = $(MobileBy.id("menu_catalog"));
-    private ElementsCollection categories = $$(MobileBy.id("titleTv"));
-    private SelenideElement mainMenuIcon = $(MobileBy.id("menu_main"));
-    private SelenideElement adPopUp = $(MobileBy.id("commonBtnSA"));
+    private SelenideElement catalogButton = $(AppiumBy.id("menu_catalog"));
+    private ElementsCollection categories = $$(AppiumBy.id("titleTv"));
+    private SelenideElement mainMenuIcon = $(AppiumBy.id("menu_main"));
+    private SelenideElement adPopUp = $(AppiumBy.id("commonBtnSA"));
 
 
     @Step("Открываем каталог в нижнем Меню")

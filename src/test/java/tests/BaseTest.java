@@ -47,19 +47,18 @@ public class BaseTest {
         Configuration.reportsFolder = SCREENSHOT_TO_SAVE_FOLDER;
         //инициализируем андройд драйвер
         Configuration.browser = runHelper().getDriverClass().getName();
-        Configuration.startMaximized = false;
         Configuration.browserSize = null;
         Configuration.timeout = 10000;
-        disableAnimationOnEmulator();
+        //disableAnimationOnEmulator();
     }
 
     /**
      * Отключение анимаций на эмуляторе чтобы не лагало
      */
     private static void disableAnimationOnEmulator() {
-        executeBash("adb -s shell settings put global transition_animation_scale 0.0");
-        executeBash("adb -s shell settings put global window_animation_scale 0.0");
-        executeBash("adb -s shell settings put global animator_duration_scale 0.0");
+//        executeBash("adb -s shell settings put global transition_animation_scale 0.0");
+//        executeBash("adb -s shell settings put global window_animation_scale 0.0");
+//        executeBash("adb -s shell settings put global animator_duration_scale 0.0");
     }
 
     /**

@@ -8,15 +8,15 @@ import static driver.EmulatorHelper.sendKeysAndFind;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
-import io.appium.java_client.MobileBy;
+import io.appium.java_client.AppiumBy;
 import io.qameta.allure.Step;
 
 /**
  * Страница с поиском
  */
 public class SearchPage extends BasePage {
-    private SelenideElement searchField = $(MobileBy.id("searchTv"));
-    private SelenideElement searchFieldExpanded = $(MobileBy.id("search_src_text"));
+    private SelenideElement searchField = $(AppiumBy.id("searchTv"));
+    private SelenideElement searchFieldExpanded = $(AppiumBy.id("search_src_text"));
     private SelenideElement tempItem;
 
 
@@ -30,7 +30,7 @@ public class SearchPage extends BasePage {
 
     @Step("Получаем название первого найденного товара")
     public String getFirstFoundedFullItemName() {
-        tempItem = $(MobileBy.xpath("(//android.widget.TextView[@content-desc=\"tile-name\"])[1]"));
+        tempItem = $(AppiumBy.xpath("(//android.widget.TextView[@content-desc=\"tile-name\"])[1]"));
         return tempItem.getText();
     }
 
